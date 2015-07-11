@@ -33,25 +33,19 @@ class BPMView extends Ui.View
 
     function onUpdate(dc)
     {   
-        var invertColors = false;
-        if (!invertColors) {
-            dc.setColor( Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK );
-        } else {
-            dc.setColor( Gfx.COLOR_TRANSPARENT, Gfx.COLOR_WHITE );
-        }
+        // clear display
+        dc.setColor( Gfx.COLOR_TRANSPARENT, Gfx.COLOR_BLACK );
         dc.clear();
-        if (!invertColors) {
-            dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
-        } else {
-            dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT );
-        }
+        dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
     
         if (m_bpm > 0) {
+            // display BPM info
             var bpmString = "" + m_bpm.format("%.2f");
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) - 60, Gfx.FONT_NUMBER_THAI_HOT, bpmString, Gfx.TEXT_JUSTIFY_CENTER );
             var bpmLabelString = "BPM";
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) + 5, Gfx.FONT_MEDIUM, bpmLabelString, Gfx.TEXT_JUSTIFY_CENTER );
         } else {
+            // display startup info
             var tapMsg = "Tap for tempo";
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) - 50, Gfx.FONT_MEDIUM, tapMsg, Gfx.TEXT_JUSTIFY_CENTER );
             var holdMsg = "Hold to reset";
@@ -66,6 +60,7 @@ class BPMView extends Ui.View
 
 class BPMDelegate extends Ui.BehaviorDelegate {
 
+    // reset
     function reset() {
         m_numSamples = 0;
         m_startTime = 0;
@@ -73,16 +68,19 @@ class BPMDelegate extends Ui.BehaviorDelegate {
         Ui.requestUpdate();
     }
 
+    // menu softkey resets
     function onMenu() {
        reset();
     }
     
+    // hold causes vibration and reset
     function onHold() {
         var vibe = [new Attn.VibeProfile(  50, 100 )];
         Attn.vibrate(vibe);
         reset();
     }
     
+    // each tap recalculates BPM
     function onTap(evt) {
         if (m_startTime == 0) {
             m_startTime = System.getTimer();
