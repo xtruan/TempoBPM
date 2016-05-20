@@ -5,5 +5,6 @@ Tap out a song tempo on the screen of your device to calculate the beats per min
 
 Changelog:
 
+* 1.2 - Adding support for vivoactive HR
 * 1.1 - Adding support for Forerunner 630
 * 1.0 - Initial release

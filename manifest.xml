@@ -5,6 +5,7 @@
             <iq:product id="square_watch"/>
             <iq:product id="round_watch"/>
             <iq:product id="vivoactive"/>
+            <iq:product id="vivoactive_hr"/>
             <iq:product id="epix"/>
             <iq:product id="fr630"/>
         </iq:products>
