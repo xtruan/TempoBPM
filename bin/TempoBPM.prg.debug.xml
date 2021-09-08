@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\S\ws\TempoBPM\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="3" lineNum="13" pc="268435456" symbol="onStart"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="4" lineNum="17" pc="268435461" symbol="onStop"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="5" lineNum="21" pc="268435466" symbol="getInitialView"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="5" lineNum="22" pc="268435470" symbol="getInitialView"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="5" lineNum="10" pc="268436411" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="7" lineNum="30" pc="268435541" symbol="onLayout"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="34" pc="268435546" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="37" pc="268435550" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="38" pc="268435586" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="39" pc="268435598" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="41" pc="268435634" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="43" pc="268435651" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="44" pc="268435681" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="49" pc="268435762" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="50" pc="268435769" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="51" pc="268435869" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="52" pc="268435876" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="55" pc="268435948" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="56" pc="268435970" symbol="onUpdate"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="8" lineNum="27" pc="268436460" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="10" lineNum="64" pc="268436058" symbol="reset"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="10" lineNum="65" pc="268436062" symbol="reset"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="10" lineNum="66" pc="268436075" symbol="reset"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="10" lineNum="67" pc="268436088" symbol="reset"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="10" lineNum="68" pc="268436101" symbol="reset"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="11" lineNum="72" pc="268436118" symbol="onMenu"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="11" lineNum="73" pc="268436122" symbol="onMenu"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="12" lineNum="77" pc="268436135" symbol="onHold"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="12" lineNum="78" pc="268436139" symbol="onHold"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="12" lineNum="79" pc="268436191" symbol="onHold"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="12" lineNum="80" pc="268436209" symbol="onHold"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="13" lineNum="84" pc="268436222" symbol="onTap"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="13" lineNum="85" pc="268436226" symbol="onTap"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="88" pc="268436239" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="89" pc="268436243" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="90" pc="268436260" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="92" pc="268436288" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="94" pc="268436307" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="95" pc="268436324" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="96" pc="268436352" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="97" pc="268436362" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="100" pc="268436390" symbol="onSelect"/>
+        <entry filename="C:\\S\\ws\\TempoBPM\\source\\BPMApp.mc" id="14" lineNum="61" pc="268436479" symbol="&lt;init&gt;"/>
+        <entry filename="Rez" id="21" lineNum="1" pc="268436430" symbol="&lt;init&gt;"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="12" object="true" symbol="BPMApp"/>
+        <entry field="true" id="10" symbol="m_startTime"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="19" method="true" symbol="reset"/>
+        <entry field="true" id="18" symbol="AppName"/>
+        <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="16" module="true" symbol="Menus"/>
+        <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389098" method="true" symbol="onTap"/>
+        <entry id="13" object="true" symbol="BPMView"/>
+        <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="11" symbol="m_bpm"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry field="true" id="17" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="15" module="true" symbol="Layouts"/>
+        <entry field="true" id="9" symbol="m_numSamples"/>
+        <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="14" object="true" symbol="BPMDelegate"/>
+        <entry id="8389099" method="true" symbol="onHold"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435460" name="state" stackId="1" startPc="268435456"/>
+        <entry arg="true" endPc="268435465" name="state" stackId="1" startPc="268435461"/>
+        <entry arg="true" endPc="268435545" name="dc" stackId="1" startPc="268435541"/>
+        <entry endPc="268435758" name="bpmString" stackId="2" startPc="268435651"/>
+        <entry endPc="268435947" name="tapMsg" stackId="3" startPc="268435762"/>
+        <entry endPc="268435947" name="holdMsg" stackId="4" startPc="268435762"/>
+        <entry endPc="268436053" name="numSamplesString" stackId="5" startPc="268435550"/>
+        <entry arg="true" endPc="268436054" name="dc" stackId="1" startPc="268435546"/>
+        <entry endPc="268436220" name="vibe" stackId="2" startPc="268436139"/>
+        <entry arg="true" endPc="268436221" name="evt" stackId="1" startPc="268436135"/>
+        <entry arg="true" endPc="268436238" name="evt" stackId="1" startPc="268436222"/>
+        <entry endPc="268436386" name="millis" stackId="1" startPc="268436324"/>
+        <entry endPc="268436386" name="mins" stackId="2" startPc="268436324"/>
+    </localVars>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/BPMApp" offset="182" parentId="globals" symbolId="BPMApp" type="class"/>
+        <dataEntry label="globals/Rez" offset="253" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/Rez/Drawables" offset="332" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="371" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="402" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="433" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/JsonData" offset="464" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="495" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/BPMView" offset="534" parentId="globals" symbolId="BPMView" type="class"/>
+        <dataEntry label="globals/BPMDelegate" offset="597" parentId="globals" symbolId="BPMDelegate" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="onStart" parent="BPMApp">
+            <param id="state"/>
+            <documentation><![CDATA[<div class="description"> onStart() is called on application start up<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="BPMApp">
+            <param id="state"/>
+            <documentation><![CDATA[<div class="description"> onStop() is called when your application is exiting<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getInitialView" parent="BPMApp">
+            <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onLayout" parent="BPMView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onUpdate" parent="BPMView">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="reset" parent="BPMDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onMenu" parent="BPMDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHold" parent="BPMDelegate">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onTap" parent="BPMDelegate">
+            <param id="evt"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onSelect" parent="BPMDelegate">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
