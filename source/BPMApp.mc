@@ -70,7 +70,12 @@ class BPMDelegate extends Ui.BehaviorDelegate {
 
     // menu softkey resets
     function onMenu() {
-       reset();
+        reset();
+    }
+    
+    // up/prev resets
+    function onPreviousPage() {
+        reset();
     }
     
     // hold causes vibration and reset
