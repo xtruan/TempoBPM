@@ -71,11 +71,13 @@ class BPMDelegate extends Ui.BehaviorDelegate {
     // menu softkey resets
     function onMenu() {
         reset();
+        return true;
     }
     
     // up/prev resets
     function onPreviousPage() {
         reset();
+        return true;
     }
     
     // hold causes vibration and reset
@@ -83,11 +85,13 @@ class BPMDelegate extends Ui.BehaviorDelegate {
         var vibe = [new Attn.VibeProfile(  50, 100 )];
         Attn.vibrate(vibe);
         reset();
+        return true;
     }
     
     // each tap recalculates BPM
     function onTap(evt) {
         onSelect();
+        return true;
     }
     
     function onSelect() {
@@ -103,6 +107,7 @@ class BPMDelegate extends Ui.BehaviorDelegate {
         }
         
         Ui.requestUpdate();
+        return true;
     }
 
 }
