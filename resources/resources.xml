@@ -1,4 +1,6 @@
 <resources>
     <string id="AppName">BPM</string>
+    <string id="mean_simple_label">Mean (Simple)</string>
+    <string id="median_adv_label">Median (Advanced)</string>
     <bitmap id="LauncherIcon" filename="images/icon40.png" />
 </resources>
