@@ -1,0 +1,4 @@
+<menu id="TempoBPMMenu">
+    <menu-item id="mean_simple" label="@Strings.mean_simple_label" />
+    <menu-item id="median_adv" label="@Strings.median_adv_label" />
+</menu>

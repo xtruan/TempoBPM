@@ -1,11 +1,8 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
-using Toybox.Attention as Attn;
 
-var m_numSamples = 0;
-var m_startTime = 0;
-var m_bpm = 0;
+var m_bpmCalculator;
 
 class BPMApp extends App.AppBase {
 
@@ -29,6 +26,9 @@ class BPMView extends Ui.View
 
     function onLayout(dc)
     {
+        m_bpmCalculator = new SimpleBPMCalculator();
+        //m_bpmCalculator = new BPMCalculator();
+        m_bpmCalculator.initialize();
     }
 
     function onUpdate(dc)
@@ -38,12 +38,31 @@ class BPMView extends Ui.View
         dc.clear();
         dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
     
-        if (m_bpm > 0) {
+        var consistency = m_bpmCalculator.getConsistencyInfo();
+        if (m_bpmCalculator.getBPM() > 0) {
             // display BPM info
-            var bpmString = "" + m_bpm.format("%.1f");
+            var bpmString = "---";
+            if (consistency[3] == true) {
+                bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
+            }
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) - 60, Gfx.FONT_NUMBER_THAI_HOT, bpmString, Gfx.TEXT_JUSTIFY_CENTER );
             //var bpmLabelString = "BPM";
             //dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) + 5, Gfx.FONT_MEDIUM, bpmLabelString, Gfx.TEXT_JUSTIFY_CENTER );
+            
+            var min = 0;
+            var sec = m_bpmCalculator.getSecsElapsed();
+            
+            // convert secs to mins and secs
+            while (sec > 59) {
+                min += 1;
+                sec -= 60;
+            }
+            
+            // format time
+            var timerString = "" + min.format("%d") + ":" + sec.format("%02d");
+            
+            dc.drawText( (dc.getWidth() / 2), Gfx.getFontHeight(Gfx.FONT_MEDIUM), Gfx.FONT_MEDIUM, timerString, Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER );
+            
         } else {
             // display startup info
             var tapMsg = "Tap for tempo";
@@ -52,62 +71,13 @@ class BPMView extends Ui.View
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Gfx.FONT_MEDIUM, holdMsg, Gfx.TEXT_JUSTIFY_CENTER );
         }
         
-        var numSamplesString = "" + m_numSamples + " samples";
+        //var consistency = m_bpmCalculator.getConsistencyInfo();
+        var numSamplesString;
+        if (m_bpmCalculator.isSimple() == true) {
+            numSamplesString = "" + consistency[0].format("%d") + " samples";
+        } else {
+            numSamplesString = "" + consistency[0].format("%d") + " / " + consistency[1].format("%d") + " / " + consistency[2].format("%d") + "%";
+        }
         dc.drawText( (dc.getWidth() / 2), 2 * (dc.getHeight() / 3) + 10, Gfx.FONT_MEDIUM, numSamplesString, Gfx.TEXT_JUSTIFY_CENTER );
     }
-
-}
-
-class BPMDelegate extends Ui.BehaviorDelegate {
-
-    // reset
-    function reset() {
-        m_numSamples = 0;
-        m_startTime = 0;
-        m_bpm = 0;
-        Ui.requestUpdate();
-    }
-
-    // menu softkey resets
-    function onMenu() {
-        reset();
-        return true;
-    }
-    
-    // up/prev resets
-    function onPreviousPage() {
-        reset();
-        return true;
-    }
-    
-    // hold causes vibration and reset
-    function onHold(evt) {
-        var vibe = [new Attn.VibeProfile(  50, 100 )];
-        Attn.vibrate(vibe);
-        reset();
-        return true;
-    }
-    
-    // each tap recalculates BPM
-    function onTap(evt) {
-        onSelect();
-        return true;
-    }
-    
-    function onSelect() {
-    	if (m_startTime == 0) {
-            m_startTime = System.getTimer();
-        }
-        m_numSamples += 1;
-        
-        if (m_numSamples > 1) {
-            var millis = System.getTimer() - m_startTime;
-            var mins = millis / 60000.0;
-            m_bpm = (m_numSamples - 1) / mins;
-        }
-        
-        Ui.requestUpdate();
-        return true;
-    }
-
 }
