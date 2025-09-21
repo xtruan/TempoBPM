@@ -5,7 +5,7 @@ Tap out a song tempo on the screen of your device to calculate the beats per min
 
 Changelog:
 
-* 3.1.0 - Configurable modes of operation. Simple mean or more advanced median filtering modes accesible via the menu.
+* 3.1.0 - Configurable modes of operation. Simple mean or more advanced median filtering modes accessible via the menu.
 * 3.0.3 - Added support for additional devices.
 * 3.0 - Added support for MANY more devices! Cleaned up layout to work better on more devices.
 * 1.2 - Adding support for vivoactive HR
