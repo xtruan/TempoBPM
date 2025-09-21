@@ -143,7 +143,7 @@ class BPMCalculator {
 
     function getConsistencyInfo() {
         if (m_intervals.size() == 0) {
-            return [ 0, 0, 0.0, false ];
+            return [ m_numSamples, 0, 0.0, false ];
         }
         
         var medianInterval = calculateMedian(m_intervals);
@@ -151,8 +151,8 @@ class BPMCalculator {
         var isValid = (consistentIntervals.size() >= m_minConsistentTaps);
         
         return [ 
+            m_numSamples, 
             consistentIntervals.size(), 
-            m_intervals.size(), 
             (consistentIntervals.size().toFloat() / m_intervals.size().toFloat()) * 100.0,
             isValid
         ];

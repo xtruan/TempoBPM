@@ -41,13 +41,23 @@ class BPMView extends Ui.View
         var consistency = m_bpmCalculator.getConsistencyInfo();
         if (m_bpmCalculator.getBPM() > 0) {
             // display BPM info
-            var bpmString = "---";
+            //var bpmString = "---";
+            //if (consistency[3] == true) {
+            //    bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
+            //}
+            
+            // display BPM info
+            var bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
             if (consistency[3] == true) {
-                bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
+                dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
+            } else {
+                dc.setColor( Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT );
             }
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) - 60, Gfx.FONT_NUMBER_THAI_HOT, bpmString, Gfx.TEXT_JUSTIFY_CENTER );
             //var bpmLabelString = "BPM";
             //dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2) + 5, Gfx.FONT_MEDIUM, bpmLabelString, Gfx.TEXT_JUSTIFY_CENTER );
+            
+            dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
             
             var min = 0;
             var sec = m_bpmCalculator.getSecsElapsed();
