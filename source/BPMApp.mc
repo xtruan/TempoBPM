@@ -39,7 +39,7 @@ class BPMView extends Ui.View
         dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
     
         var consistency = m_bpmCalculator.getConsistencyInfo();
-        if (m_bpmCalculator.getBPM() > 0) {
+        if (consistency[0] > 0) {
             // display BPM info
             //var bpmString = "---";
             //if (consistency[3] == true) {
@@ -47,7 +47,11 @@ class BPMView extends Ui.View
             //}
             
             // display BPM info
-            var bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
+            var bpm = m_bpmCalculator.getBPM();
+            var bpmString = "---";
+            if (bpm > 0) {
+               bpmString = "" + bpm.format("%.1f");
+            }
             if (consistency[3] == true) {
                 dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT );
             } else {

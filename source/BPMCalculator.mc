@@ -2,15 +2,15 @@ using Toybox.System;
 
 class BPMCalculator {
     // Static-like variables for the calculator
-    var m_tapTimes;
-    var m_intervals;
-    var m_startTime;
-    var m_numSamples;
-    var m_bpm;
-    var m_secsElapsed;
-    var m_percentConsistentTaps;
-    var m_minConsistentTaps;
-    var m_maxSamples;
+    hidden var m_tapTimes;
+    hidden var m_intervals;
+    hidden var m_startTime;
+    hidden var m_numSamples;
+    hidden var m_bpm;
+    hidden var m_secsElapsed;
+    hidden var m_percentConsistentTaps;
+    hidden var m_validThreshold;
+    hidden var m_maxSamples;
 
     function initialize() {
         m_tapTimes = [];
@@ -18,11 +18,11 @@ class BPMCalculator {
         m_startTime = 0;
         m_numSamples = 0;
         m_bpm = 0.0;
+        m_validThreshold = 5;
         m_secsElapsed = 0;
         
         m_percentConsistentTaps = 13;  // 13% maximum deviation
-        m_minConsistentTaps = 5;       // Min taps required for validity
-        m_maxSamples = 20;             // Limit stored samples
+        m_maxSamples = 30;             // Limit stored samples
         
     }
 
@@ -53,7 +53,7 @@ class BPMCalculator {
         m_numSamples += 1;
         
         // Calculate BPM using median method if we have enough intervals
-        if (m_intervals.size() >= 2) {
+        if (m_intervals.size() >= 1) {
             var medianInterval = calculateMedian(m_intervals);
             var consistentIntervals = filterConsistentIntervals(m_intervals, medianInterval);
             
@@ -66,6 +66,7 @@ class BPMCalculator {
             
             // Convert to BPM (beats per minute)
             m_bpm = 60000.0 / finalMedianInterval;
+            m_validThreshold = calculateValidThreshold(m_bpm);
         }
         
         return true;
@@ -124,6 +125,20 @@ class BPMCalculator {
         
         return consistentIntervals;
     }
+    
+    function calculateValidThreshold(bpm) {
+        // calculate validity threshold, add 1 more tap for each 10 bpm over 30
+        var validThreshold = Math.floor((bpm - 30) / 10.0);
+        // bound dynamic range between 0 and 5
+        if (validThreshold < 0) {
+            validThreshold = 0;
+        } else if (validThreshold > 5) {
+            validThreshold = 5;
+        }
+        // add constant threshold
+        validThreshold = validThreshold + 5;
+        return validThreshold;
+    }
 
     function getBPM() {
         return m_bpm;
@@ -148,7 +163,7 @@ class BPMCalculator {
         
         var medianInterval = calculateMedian(m_intervals);
         var consistentIntervals = filterConsistentIntervals(m_intervals, medianInterval);
-        var isValid = (consistentIntervals.size() >= m_minConsistentTaps);
+        var isValid = (consistentIntervals.size() >= m_validThreshold);
         
         return [ 
             m_numSamples, 
@@ -164,6 +179,7 @@ class BPMCalculator {
         m_startTime = 0;
         m_numSamples = 0;
         m_bpm = 0.0;
+        m_validThreshold = 5;
         m_secsElapsed = 0;
     }
 }
