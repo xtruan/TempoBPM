@@ -41,12 +41,6 @@ class BPMView extends Ui.View
         var consistency = m_bpmCalculator.getConsistencyInfo();
         if (consistency[0] > 0) {
             // display BPM info
-            //var bpmString = "---";
-            //if (consistency[3] == true) {
-            //    bpmString = "" + m_bpmCalculator.getBPM().format("%.1f");
-            //}
-            
-            // display BPM info
             var bpm = m_bpmCalculator.getBPM();
             var bpmString = "---";
             if (bpm > 0) {
@@ -85,7 +79,7 @@ class BPMView extends Ui.View
             dc.drawText( (dc.getWidth() / 2), (dc.getHeight() / 2), Gfx.FONT_MEDIUM, holdMsg, Gfx.TEXT_JUSTIFY_CENTER );
         }
         
-        //var consistency = m_bpmCalculator.getConsistencyInfo();
+        // display sample info
         var numSamplesString;
         if (m_bpmCalculator.isSimple() == true) {
             numSamplesString = "" + consistency[0].format("%d") + " samples";
