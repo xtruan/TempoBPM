@@ -12,6 +12,7 @@ class BPMCalculator {
     hidden var m_percentConsistentTaps;
     hidden var m_validThreshold;
     hidden var m_maxSamples;
+    hidden var m_sorter;
 
     function initialize() {
         m_tapTimes = [];
@@ -24,6 +25,7 @@ class BPMCalculator {
         
         m_percentConsistentTaps = 13;  // Maximum deviation (%)
         m_maxSamples = 30;             // Limit stored samples
+        m_sorter = new QuickSort();
         
     }
 
@@ -84,16 +86,9 @@ class BPMCalculator {
             sorted.add(values[i]);
         }
         
-        // Simple bubble sort (MonkeyC doesn't have built-in sort)
-        for (var i = 0; i < sorted.size() - 1; i++) {
-            for (var j = 0; j < sorted.size() - i - 1; j++) {
-                if (sorted[j] > sorted[j + 1]) {
-                    var temp = sorted[j];
-                    sorted[j] = sorted[j + 1];
-                    sorted[j + 1] = temp;
-                }
-            }
-        }
+        //Sys.println("" + sorted);
+        m_sorter.sort(sorted);
+        //Sys.println("" + sorted);
         
         var mid = sorted.size() / 2;
         
